@@ -44,7 +44,7 @@ h2{
   color: white;
   position: relative;
   top: -237px;
-  left: 80px;
+  left: 60px;
 }
 .searchImg{
    height: 30px;
@@ -175,4 +175,11 @@ h3{
 
 #musicPlayer button:hover {
     background-color: #777;
+}
+.RS-Play{
+   height: 100px;
+   width: 100px;
+   position: relative;
+   top: -1852px;
+   left: -210px;
 }

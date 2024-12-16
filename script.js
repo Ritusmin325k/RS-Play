@@ -86,3 +86,40 @@ document.querySelectorAll("img").forEach(img => {
         }
     });
 });
+
+
+// Song data for search functionality
+const songsList = [
+    { name: "Espresso", class: "espresso" },
+    { name: "Millionaire", class: "millionaire" },
+    { name: "Ajj Ki Raat", class: "ajjKi" },
+    { name: "Samjho Naa", class: "samjho-naa" },
+    { name: "Stay", class: "stay" },
+    { name: "End of the Beginning", class: "end-of" },
+    { name: "Senorita", class: "senorita" },
+    { name: "Paint the Town Red", class: "paint" }
+];
+
+// Function to filter and display songs based on search input
+function searchSongs() {
+    const searchInput = document.getElementById("search").value.toLowerCase();
+    const allImages = document.querySelectorAll("img");
+
+    // Reset visibility of all images
+    allImages.forEach(img => {
+        img.style.display = "none";
+    });
+
+    // Filter and display matching songs
+    songsList.forEach(song => {
+        if (song.name.toLowerCase().includes(searchInput)) {
+            const songImg = document.querySelector(`.${song.class}`);
+            if (songImg) songImg.style.display = "inline";
+        }
+    });
+}
+
+// Attach event listener to the search input
+document.getElementById("search").addEventListener("input", searchSongs);
+
+if (!searchInput) allImages.forEach(img => (img.style.display = "inline"));
